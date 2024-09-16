@@ -24,5 +24,7 @@ namespace Foci_WebApp.Pages
         {
             Meccs = await _context.Meccsek.ToListAsync();
         }
+
+
     }
 }

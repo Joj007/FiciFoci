@@ -1,0 +1,78 @@
+﻿@page
+@model Foci_WebApp.Pages.TabellaModel
+
+@{
+    ViewData["Title"] = "Tabella";
+}
+
+<h1>Tabella</h1>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Helyezés
+            </th>
+            <th>
+                Csapat Neve
+            </th>
+            <th>
+                Játszott mérkőzések száma
+            </th>
+            <th>
+                Győzelem
+            </th>
+            <th>
+                Döntetlen
+            </th>
+            <th>
+                Vereség
+            </th>
+            <th>
+                Pontszám
+            </th>
+            <th>
+                Lőtt gól
+            </th>
+            <th>
+                Kapott gól
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.csapatok) {
+            <tr>
+                <td>
+                    @item.Helyezes
+                </td>
+            <td>
+                    @item.Nev
+            </td>
+            <td>
+                    @item.NumberOfMatches
+            </td>
+            <td>
+                    @item.Wins
+            </td>
+            <td>
+                    @item.Ties
+            </td>
+            <td>
+                    @item.Loses
+            </td>
+            <td>
+                    @item.Points
+            </td>
+            <td>
+                    @item.GoalsScored
+            </td>
+            <td>
+                    @item.GoalsTaken
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
